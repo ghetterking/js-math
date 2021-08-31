@@ -1,128 +1,233 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
-        <title>Maths and what it's good for (life lessons included)</title>
-        <style>
-            /* e x t r a    s p a c e    n e v e r    h u r t s */
-            div {
-                padding: 1%;
-            }
+<?php 
+ require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/projects/js_nutshell/config.php'; 
+ require_once $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/projects/js_nutshell/inc/header.inc.php';
 
-            /* for that real hacker feel */
-            .container-fluid {
-                font-size: medium;
-                color: white;
-                background-color: black;
-            }
+  // Used to add related links to the table content 
+  $rel_links = [
+    'topic.A.name.php',
+    'topic.A.name.php'
+  ];
+?>
+  <h1>Maths</h1>
 
-            /* because for some reason it's messy when it's the same size */
-            button {
-                font-size: smaller;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- require_once 'header.inc.php'; -->
-        <main>
-            <h1>Maths and what it's good for</h1>
-            <div class="teaser">
-                <p>Do you like maths? No? Well you came to the right place, then! =3</p>
-            </div>
-            <!-- no idea what this is supposed to be -->
-            <div class="article">
-                <h5>(life lessons included)</h5>
-                <small>
-                    <i>
-                        <br>
-                        <p>Maths is great, everybody loves math. When you're a child, you wanted to go to school asap bc of the math lessons and so did everyone else.</p>
-                        <p>All the more unfortunate is the state of how teachers nowadays do not give you a the slightest idea of what it's good for, where you can use it.</p>
-                        <p>But, i hear you say, maths is awesome and you can use it anywhere...right? Well...absolutely!</p>
-                        <p>Sometimes it's easy to see, sometimes you have to put some thought into it and sometimes it's quite far-fetched, but still, it's doable.</p>
-                        <p>And that's exactly the spirit you need!</p>
-                    </i>
-                </small>
-            </div>
-            <br>
-            <!-- the entire black part comes here -->
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- name -->
-                    <div class="col-xs">
-                        <p>Addition</p>
-                        <p>Subtraction</p>
-                        <p>Multiplication</p>
-                        <p>Division</p>
-                        <p>Exponentiation</p>
-                        <p>Remainder</p>
-                    </div>
-                    <!-- example calculations -->
-                    <div class="col-xs">
-                        <p>1 + 2 =</p>
-                        <p>3 - 4 =</p>
-                        <p>5 * 6 =</p>
-                        <p>7 / 8 =</p>
-                        <p>9 ** 10 =</p>
-                        <p>11 % 12 =</p>
-                    </div>
-                    <!-- check console.log -->
-                    <div class="col-xs">
-                        <p>check console.log</p>
-                        <p>check console.log</p>
-                        <p>check console.log</p>
-                        <p>check console.log</p>
-                        <p>check console.log</p>
-                        <p>check console.log</p>
-                    </div>
-                    <!-- document.write is ugly and i have to reload page to get back -->
-                    <div class="col-xs">
-                        <p><button type='button' onclick="alert(1+2).style.display='block'">click to show result</button></p>
-                        <p><button type='button' onclick="alert(3-4).style.display='block'">click to show result</button></p>
-                        <p><button type='button' onclick="alert(5*6).style.display='block'">click to show result</button></p>
-                        <p><button type='button' onclick="alert(7/8).style.display='block'">click to show result</button></p>
-                        <p><button type='button' onclick="alert(9**10).style.display='block'">click to show result</button></p>
-                        <p><button type='button' onclick="alert(11%12).style.display='block'">click to show result</button></p>
-                    </div>
-                    <!-- explanations -->
-                    <div class="col-md">
-                        <p>This is for when you want to add two floats or integers together.</p>
-                        <p>This is for when you want to find out how much smaller the second argument is than the first one or what their difference is.</p>
-                        <p>This is for when you want to multiply two numbers by eachother or when you want to count the number of fields in a rectangle with sides as given.</p>
-                        <p>This is for when you want to find out how many times the second argument can be fitted into the first one.</p>
-                        <p>This is for when you want to do many multiplications after eachother with the same numbers.</p>
-                        <p>This is for when you want to find out what the remainder is if you divide the first argument by the second one.</p>
-                    </div>
-                    <!-- the obligatory java script part -->
-                    <script>
-                        console.log (1 + 2);
-                        console.log (3 - 4);
-                        console.log (5 * 6);
-                        console.log (7 / 8);
-                        console.log (9 ** 10);
-                        console.log (11 % 12);
-                    </script>
-                </div>
-            </div>
-            <!-- end of black part -->
-            <div>
-                <br>
-                <!-- just some interesting topics i found later on that wouldnt fit in here -->
-                <h2>Further reading:</h2>
-                <a href="https://mathjs.org/docs/datatypes/units.html">Units</a><br>
-                <a href="https://mathjs.org/docs/datatypes/bignumbers.html">Big Numbers</a><br>
-                <a href="https://riptutorial.com/javascript/example/766/trigonometry">Trigonometry</a><br>
-                <a href="https://mathjs.org/docs/datatypes/complex_numbers.html">Complex Numbers</a><br>
-                <a href="https://mathjs.org/docs/datatypes/matrices.html">Matrices</a><br>
-                <a href="https://www.codeproject.com/articles/18922/solving-a-differential-equation">Differential Equations</a><br>
-                <a href="https://toreaurstad.blogspot.com/2017/08/integrals-in-math-with-javascript.html">Integrals</a><br>
-                <a href="https://medium.com/@ahlechandre/lambda-calculus-with-javascript-897f7e81f259">Lambda Calculus</a><br>
-                <a href="http://old.nationalcurvebank.org/vectors/vectors.htm">Vector Calculus</a><br>
-                <!-- deleted the rest for simplicity's sake -->
-            </div>
-        </main>
-    <!--require_once 'footer.inc.php';-->
-    </body>
-</html>
+    <!-- Teaser -->
+    <div class="teaser">
+      <p>Do you like maths? No? Well you came to the right place, then! =3</p>
+    </div>
+
+    <!-- article -->
+    <div class="article">
+      <h5>(life lessons included)</h5>
+      <small>
+        <i>
+          <p>Maths is great, everybody loves math. When you're a child, you wanted to go to school asap bc of the math lessons and so did everyone else.</p>
+          <p>All the more unfortunate is the state of how teachers nowadays do not give you a the slightest idea of what it's good for, where you can use it.</p>
+          <p>But, i hear you say, maths is awesome and you can use it anywhere...right? Well...absolutely!</p>
+          <p>Sometimes it's easy to see, sometimes you have to put some thought into it and sometimes it's quite far-fetched, but still, it's doable.</p>
+          <p>And that's exactly the spirit you need!</p>
+        </i>
+      </small>
+    </div>
+
+    <!-- Code Area 1 -->
+    <div class="codeArea">
+      <h2>Addition</h2>
+      <div class="codeArea flex-container codeExample">
+        <div class="col-6 code">
+          <pre>
+            <code class = "language-css">
+1 + 2 =
+/*This is for when you want to add two floats or integers together.*/
+            </code>
+          </pre>
+        </div>
+              
+        <div class="col-6 output">
+          <h4>Output:</h4>    
+          <div id="calcAdd"></div>
+          <button class="btn btn-run" onclick="calcAdd(0)">Run</button>
+          <button class="btn btn-run" onclick="calcAdd(1)">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Code Area 2 -->
+    <div class="codeArea">
+      <h2>Subtraction</h2>
+      <div class="codeArea flex-container codeExample">
+        <div class="col-6 code">
+          <pre>
+            <code class = "language-css">
+3 - 4 =
+/*This is for when you want to find out how much smaller the second argument 
+is than the first one or what their difference is.*/
+            </code>
+          </pre>
+        </div>
+              
+        <div class="col-6 output">
+          <h4>Output:</h4>
+          <div id="calcSub"></div>
+          <button class="btn btn-run" onclick="calcSub(0)">Run</button>
+          <button class="btn btn-run" onclick="calcSub(1)">Reset</button>
+        </div>
+      </div>    
+    </div>
+
+    <!-- Code Area 3 -->
+    <div class="codeArea">
+      <h2>Multiplication</h2>
+      <div class="codeArea flex-container codeExample">
+        <div class="col-6 code">
+          <pre>
+            <code class = "language-css">
+5 * 6 =
+/*This is for when you want to multiply two numbers by eachother or when you want 
+to count the number of fields in a rectangle with sides as given.*/
+            </code>
+          </pre>
+        </div>
+              
+        <div class="col-6 output">
+          <h4>Output:</h4>
+          <div id="calcMul"></div>
+          <button class="btn btn-run" onclick="calcMul(0)">Run</button>
+          <button class="btn btn-run" onclick="calcMul(1)">Reset</button>
+        </div>
+      </div>    
+    </div>
+
+    <!-- Code Area 4 -->
+    <div class="codeArea">
+      <h2>Division</h2>
+      <div class="codeArea flex-container codeExample">
+        <div class="col-6 code">
+          <pre>
+            <code class = "language-css">
+7 / 8 =
+/*This is for when you want to find out how many times the second argument can be 
+fitted into the first one.*/
+            </code>
+          </pre>
+        </div>
+              
+        <div class="col-6 output">
+          <h4>Output:</h4>
+          <div id="calcDiv"></div>
+          <button class="btn btn-run" onclick="calcDiv(0)">Run</button>
+          <button class="btn btn-run" onclick="calcDiv(1)">Reset</button>
+        </div>
+      </div>    
+    </div>
+
+    <!-- Code Area 5 -->
+    <div class="codeArea">
+      <h2>Exponentiation</h2>
+      <div class="codeArea flex-container codeExample">
+        <div class="col-6 code">
+          <pre>
+            <code class = "language-css">
+9 ** 10 =
+/*This is for when you want to do many multiplications after eachother with the 
+same numbers.*/
+            </code>
+          </pre>
+        </div>
+        
+        <div class="col-6 output">
+          <h4>Output:</h4>
+          <div id="calcExp"></div>
+          <button class="btn btn-run" onclick="calcExp(0)">Run</button>
+          <button class="btn btn-run" onclick="calcExp(1)">Reset</button>
+        </div>
+      </div>    
+    </div>
+
+    <!-- Code Area 6 -->
+    <div class="codeArea">
+      <h2>Remainder</h2>
+      <div class="codeArea flex-container codeExample">
+        <div class="col-6 code">
+          <pre>
+            <code class = "language-css">
+11 % 12 =
+/*This is for when you want to find out what the remainder is if you divide the 
+first argument by the second one.*/
+            </code>
+          </pre>
+        </div>
+        
+        <div class="col-6 output">
+          <h4>Output:</h4>
+          <div id="calcRem"></div>
+          <button class="btn btn-run" onclick="calcRem(0)">Run</button>
+          <button class="btn btn-run" onclick="calcRem(1)">Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- the java script stuff -->
+    <script>
+      function calcAdd(opt) {       
+
+        let x = 1 + 2;
+        document.getElementById("calcAdd").innerHTML = x;
+
+        if (opt == 0) {
+          document.getElementById('calcAdd').innerHTML = x;
+        } else {
+          document.getElementById('calcAdd').innerHTML = "";
+        }
+      }
+
+      function calcSub(opt) {
+        let y = 3 - 4;
+        document.getElementById("calcSub").innerHTML = y;
+        if (opt == 0) {
+          document.getElementById('calcSub').innerHTML = y;
+        } else {
+          document.getElementById('calcSub').innerHTML = "";
+        }
+      }
+
+      function calcMul(opt) {
+        let z = 5 * 6;
+        document.getElementById("calcMul").innerHTML = z;
+        if (opt == 0) {
+          document.getElementById('calcMul').innerHTML = z;
+        } else {
+          document.getElementById('calcMul').innerHTML = "";
+        }
+      }
+
+      function calcDiv(opt) {
+        let a = 7 / 8;
+        document.getElementById("calcDiv").innerHTML = a;
+        if (opt == 0) {
+          document.getElementById('calcDiv').innerHTML = a;
+        } else {
+          document.getElementById('calcDiv').innerHTML = "";
+        }
+      }
+
+      function calcExp(opt) {
+        let b = 9 ** 10;
+        document.getElementById("calcExp").innerHTML = b;
+        if (opt == 0) {
+          document.getElementById('calcExp').innerHTML = b;
+        } else {
+          document.getElementById('calcExp').innerHTML = "";
+        }
+      }
+
+      function calcRem(opt) {
+        let c = 11 % 12;
+        document.getElementById("calcRem").innerHTML = c;
+        if (opt == 0) {
+          document.getElementById('calcRem').innerHTML = c;
+        } else {
+          document.getElementById('calcRem').innerHTML = "";
+        }
+      }
+    </script>
+    <?php include $_SERVER['CONTEXT_DOCUMENT_ROOT'] . '/projects/js_nutshell/inc/footer.inc.php'; ?>
